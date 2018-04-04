@@ -45,7 +45,11 @@ $(document).ready(() => {
 firebase.initializeApp({
   apiKey: 'AIzaSyDe27uFwRSZsd1wh3zG0jWa1DEaq8mJ6I4',
   authDomain: 'firestore-1450c.firebaseapp.com',
-  projectId: 'firestore-1450c'
+  databaseURL: "https://firestore-1450c.firebaseio.com",
+  projectId: "firestore-1450c",
+  storageBucket: "firestore-1450c.appspot.com",
+  messagingSenderId: "454689367463"
+
 });
 
 var db = firebase.firestore();
@@ -92,4 +96,32 @@ function getData(arr) {
       });
     })
   })
+}
+
+
+firebase.initializeApp(config);
+
+var provider = new firebase.auth.GoogleAuthProvider();
+
+ function signIn(){
+ firebase.auth().signInWithPopup(provider).then(function(result) {
+  // This gives you a Google Access Token. You can use it to access the Google API.
+  var token = result.credential.accessToken;
+  // The signed-in user info.
+  var user = result.user;
+  console.log(user.displayName);
+  $('.navbar, .tercera_seccion, .segunda_seccion, .cuarta_seccion').removeClass('hidden');
+
+  
+  // ...
+}).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // The email of the user's account used.
+  var email = error.email;
+  // The firebase.auth.AuthCredential type that was used.
+  var credential = error.credential;
+  // ...
+});
 }
