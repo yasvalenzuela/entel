@@ -6,10 +6,10 @@ $(document).ready(() => {
 firebase.initializeApp({
   apiKey: 'AIzaSyDe27uFwRSZsd1wh3zG0jWa1DEaq8mJ6I4',
   authDomain: 'firestore-1450c.firebaseapp.com',
-  /*databaseURL: "https://firestore-1450c.firebaseio.com",*/
+  databaseURL: "https://firestore-1450c.firebaseio.com",
   projectId: "firestore-1450c",
-  /*storageBucket: "firestore-1450c.appspot.com",*/
- /* messagingSenderId: "454689367463"*/
+  storageBucket: "firestore-1450c.appspot.com"
+  //messagingSenderId: "454689367463"
 
 });
 
@@ -53,7 +53,7 @@ function getData(arr) {
       querySnapshot.forEach((doc) => {
           console.log(doc.data());
           let k = doc.data()
-        $('#libre').append(`<td>${k.minutos}</td><td>${k.gb}</td><td>${k.redes}</td><td>${k.precio}</td>`)
+        $('#libre').append(`<td class="info">${k.minutos}</td><td>${k.gb}</td><td>${k.redes}</td><td>${k.precio}</td>`)
       });
     })
   })
@@ -66,7 +66,7 @@ function drawChart() {
 var data = google.visualization.arrayToDataTable([
 ['Año', 'Planes Libres', 'Planes Controlados'],
 ['Entel',  29.691,      9.990],
-['Movistar',29.990  ,      9.990],
+['Movistar',29.990,      9.990],
 ['Claro', 35.991,       9.990],
 ['Wom',  24.990,      9.990]
 ]);
@@ -87,6 +87,8 @@ title: 'Comparación de Planes',
 
 var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
 chart.draw(data, options);
+}
+
 /*
 firebase.initializeApp(config);
 

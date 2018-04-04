@@ -91,6 +91,11 @@ form{
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
 }
 
+
+#inputs {
+  margin-bottom: 10%;
+}
+
 label{
     font-weight:400;
     font-size:15px;
@@ -104,6 +109,12 @@ label{
     padding:30px 10px;
     margin-bottom:30px;
     border: 1px solid #f1f1f1;
+}
+
+#update {
+  background-color: #0072ae;
+  border: 1px solid transparent;
+  border-radius: 5px;
 }
 
 .btn{ 
