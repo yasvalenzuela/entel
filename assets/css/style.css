@@ -16,14 +16,31 @@ img {
   margin-left: -8%;
 }
 
-.panel .list-group li {
-  background-color: #0072AE;
-}
 
 #table {
   margin-top: 5%;
   margin-left: -5%;
+}
 
+.td,.tdOne,.tdTwo,.tdThree{
+  color: #fff;
+  text-align: center;
+}
+
+.td {
+  background-color: #0072AE;
+}
+
+.tdOne {
+  background-color: purple;
+}
+
+.tdTwo {
+  background-color: green;
+}
+
+.tdThree {
+  background-color: red;
 }
 
 #table_two {

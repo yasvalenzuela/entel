@@ -5,15 +5,15 @@ $(document).ready(() => {
     function drawChart() {
       var oldData = google.visualization.arrayToDataTable([
         ['Name', 'Popularity'],
-        ['Cesar', 250],
-        ['Rachel', 4200],
-        ['Patrick', 2900],
-        ['Eric', 8200]
+        ['Entel', 9990],
+        ['Movistar', 9990],
+        ['Claro', 9990],
+        ['Wom', 9990]
       ]);
 
       var newData = google.visualization.arrayToDataTable([
         ['Name', 'Popularity'],
-        ['Entel', 370],
+        ['Entel', 0],
         ['Movistar', 600],
         ['Claro', 700],
         ['Wom', 1500]
