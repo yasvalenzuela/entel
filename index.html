@@ -53,25 +53,29 @@
           <table class="table table-bordered table-responsive" id="table">
             <tr>
               <td colspan="1"><strong></strong></td>
-              <td colspan="3"><strong>Entel</strong></td>
-              <td colspan="3"><strong>Wom</strong></td>
-              <td colspan="3"><strong>Movistar</strong></td>
-              <td colspan="3"><strong>Claro</strong></td>
+              <td colspan="4"><strong>Entel</strong></td>
+              <td colspan="4"><strong>Wom</strong></td>
+              <td colspan="4"><strong>Movistar</strong></td>
+              <td colspan="4"><strong>Claro</strong></td>
             </tr>
             <tr>
               <td>Sim Only</td>
               <td>Min</td>
               <td>Gb Libres</td>
               <td>App</td>
+              <td>Precio</td>
               <td>Min</td>
               <td>Gb Libres</td>
               <td>App</td>
+              <td>Precio</td>
               <td>Min</td>
               <td>Gb Libres</td>
               <td>App</td>
-              <td>BMin</td>
-              <td>Gb Libres</td>
+              <td>Precio</td>
+              <td>Min</td>
+              <td>Gb Libre</td>
               <td>App</td>
+              <td>Precio</td>
             </tr>
             <tr id="fijo">
               <td>Controlados</td>
@@ -101,25 +105,34 @@
   <section class="cuarta_seccion">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-md-8 col-xs-8">
-          <table class="table table-hover table-responsive" id="table_two">
-            <tr>
-              <td><strong>#</strong></td>
-              <td><strong>Username</strong></td>
-              <td><strong>Email</strong></td>
-              <td><strong>First Name</strong></td>
-              <td><strong>Last Name</strong></td>
-              <td><strong>Staff Status</strong></td>
-            </tr>
-            <tr>
-              <td><strong>#</strong></td>
-              <td><strong>Username</strong></td>
-              <td><strong>Email</strong></td>
-              <td><strong>First Name</strong></td>
-              <td><strong>Last Name</strong></td>
-              <td><strong>Staff Status</strong></td>
-            </tr>
-          </table>
+
+        <div class="col-lg-12 col-md-12 col-xs-12">
+
+          <input data-company="Claro" type="checkbox" name="" id="claro">
+          <label for="">claro</label>
+          <input data-company="WOM" type="checkbox" name="" id="wom">
+          <label for="">wom</label>
+          <input data-company="Entel" type="checkbox" name="" id="entel">
+          <label for="">entel</label>
+          <input data-company="Movistar" type="checkbox" name="" id="movistar">
+          <label for="">movistar</label>
+          <br>
+          
+          <select name="" id="">
+            <option value="" data-plan="fijo">fijo</option>
+            <option value="" data-plan="libre">libre</option>
+          </select>
+          
+        <input type="text" id="plan" placeholder="plan">
+        <input type="number" id="precio" placeholder="valor">
+        <input type="text" id="gb" placeholder="GB">
+        <input type="text" id="min" placeholder="Minutos">
+        <input type="text" id="redes" placeholder="RRSS">
+        <button id="update">Ingresar Oferta</button>
+        
+        <div id="contents"></div>
+
+        
         </div>
       </div>
     </div>
