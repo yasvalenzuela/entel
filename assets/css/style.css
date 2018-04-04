@@ -27,6 +27,7 @@ img {
 #table_two {
   margin-left: 42%;
   margin-top: -56%;
+
 }
 
 /* estilos grafico */
@@ -34,4 +35,13 @@ img {
   width: 450px;
   height: 250px;
   display: inline-block
+}
+
+#chart_div {
+margin: 2em;
+}
+
+.favicon {
+  width: 1em;
+  height: auto;
 }
