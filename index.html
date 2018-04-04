@@ -4,9 +4,10 @@
   <title>Entel</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type = "text/javascript" src ="https://www.gstatic.com/charts/loader.js"></script>
   <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon (1).png" />
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css"> 
+  <link rel="stylesheet" href="assets/css/style.css">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
@@ -25,12 +26,12 @@
   </header>
 
 
-  <section>
+  <!--<section>
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-3">
           <div class="panel">
-              <!-- List group -->
+
             <ul class="list-group">
               <li class="list-group-item">Cras justo odio</li>
               <li class="list-group-item">Dapibus ac facilisis in</li>
@@ -42,10 +43,24 @@
         </div>
       </div>
     </div>
-  </section>
+  </section>-->
+  <!-- segunda seccion -->
+    <section class="tercera_seccion">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-5 col-xs-5 cont">
+            <span id="colchart_before"></span>
+            <span id="colchart_after"></span>
+            <span id="colchart_diff"></span>
+            <span id="barchart_diff"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
 
 
-<!-- segunda seccion -->
+<!-- tercera seccion -->
   <section class="segunda_seccion">
     <div class="container">
       <div class="row">
@@ -89,17 +104,6 @@
     </div>
   </section>
 
-<!-- tercera seccion -->
-  <section class="tercera_seccion">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5 col-md-5 col-xs-5 cont">
-          <!-- grafico -->
-        </div>
-      </div>
-    </div>
-  </div>
-  </section>
 
 <!-- cuarta seccion -->
   <section class="cuarta_seccion">
@@ -117,22 +121,22 @@
           <input data-company="Movistar" type="checkbox" name="" id="movistar">
           <label for="">movistar</label>
           <br>
-          
+
           <select name="" id="">
             <option value="" data-plan="fijo">fijo</option>
             <option value="" data-plan="libre">libre</option>
           </select>
-          
+
         <input type="text" id="plan" placeholder="plan">
         <input type="number" id="precio" placeholder="valor">
         <input type="text" id="gb" placeholder="GB">
         <input type="text" id="min" placeholder="Minutos">
         <input type="text" id="redes" placeholder="RRSS">
         <button id="update">Ingresar Oferta</button>
-        
+
         <div id="contents"></div>
 
-        
+
         </div>
       </div>
     </div>

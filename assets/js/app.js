@@ -1,5 +1,45 @@
 $(document).ready(() => {
   getData(['Entel', 'Claro', 'WOM', 'Movistar']);
+  google.charts.load('current', {packages:['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var oldData = google.visualization.arrayToDataTable([
+        ['Name', 'Popularity'],
+        ['Cesar', 250],
+        ['Rachel', 4200],
+        ['Patrick', 2900],
+        ['Eric', 8200]
+      ]);
+
+      var newData = google.visualization.arrayToDataTable([
+        ['Name', 'Popularity'],
+        ['Entel', 370],
+        ['Movistar', 600],
+        ['Claro', 700],
+        ['Wom', 1500]
+      ]);
+
+      var options = {
+
+     series: {
+       0: { color: '#e2431e' },
+       1: { color: '#e7711b' },
+       2: { color: '#f1ca3a' },
+       3: { color: '#6f9654' },
+       4: { color: '#1c91c0' },
+
+     }
+   };
+
+      var colChartDiff = new google.visualization.ColumnChart(document.getElementById('colchart_diff'));
+      var barChartDiff = new google.visualization.BarChart(document.getElementById('barchart_diff'));
+
+      var options = { legend: { position: 'top' } };
+
+      var diffData = colChartDiff.computeDiff(oldData, newData);
+      colChartDiff.draw(diffData, options);
+      barChartDiff.draw(diffData, options);
+    }
 })
 
 firebase.initializeApp({
@@ -21,9 +61,9 @@ function createData(company, plan) {
       nombre: $('#plan').val(),
       precio: $('#precio').val(),
       gb: $('#gb').val() + 'gb libres',
-      minutos: $('#min').val(), 
-      redes: $('#redes').val(), 
-      
+      minutos: $('#min').val(),
+      redes: $('#redes').val(),
+
     })
     .then(function(docRef) {
       console.log("Document written with ID: ", docRef.id);

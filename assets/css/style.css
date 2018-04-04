@@ -21,11 +21,17 @@ img {
 }
 
 #table {
-  margin-top: -105%;
   margin-left: 42%;
 }
 
 #table_two {
   margin-left: 42%;
   margin-top: -56%;
+}
+
+/* estilos grafico */
+#colchart_diff, #barchart_diff {
+  width: 450px;
+  height: 250px;
+  display: inline-block
 }
