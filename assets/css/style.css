@@ -48,6 +48,10 @@ img {
   margin-top: -56%;
 }
 
+.check {
+  padding-right: 2em;
+}
+
 /* estilos grafico */
 #colchart_diff, #barchart_diff {
   width: 450px;
