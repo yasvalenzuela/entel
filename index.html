@@ -3,21 +3,45 @@
 <head>
   <title>Entel</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type = "text/javascript" src ="https://www.gstatic.com/charts/loader.js"></script>
   <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon (1).png" />
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<!-- 
+<div class="login">
+  <div class="container">
+    <div class="col-lg-6 col-lg-offset-3"> 
+      <div class="inner-form">
+        <div class="header">
+          <img src="assets/img/Entel-logo.png" class "logo" alt="">
+          <span>Entel Administrador</span>
+        </div>
+             
+        <form role="form">
+          <div class="row">
+            <div class="col-lg-12 log">
+              <button id="google-sign" class="btn btn-default" onclick="signIn()" type="button">ENTRAR CON GOOGLE</button> 
+            </div>
+          </div>
+        </form> 
+      </div> 
+     </div>   
+   </div>   
+ </div>    
+-->
+
 <!-- navbar -->
   <header>
-    <nav class="navbar ">
+    <nav class="navbar hidden">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="#" aria-haspopup="true" aria-expanded="false">
             <img alt="Brand" src="assets/img/Entel-logo.png">
           </a>
         </div>
@@ -26,26 +50,9 @@
   </header>
 
 
-  <!--<section>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="panel">
 
-            <ul class="list-group">
-              <li class="list-group-item">Cras justo odio</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Morbi leo risus</li>
-              <li class="list-group-item">Porta ac consectetur ac</li>
-              <li class="list-group-item">Vestibulum at eros</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>-->
   <!-- segunda seccion -->
-    <section class="tercera_seccion">
+    <section class="tercera_seccion hidden">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 col-md-5 col-xs-5 cont">
@@ -57,18 +64,20 @@
     </section>
 
 
+
+
 <!-- tercera seccion -->
-  <section class="segunda_seccion">
+  <section class="segunda_seccion hidden">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-md-8 col-xs-6">
+        <div class="col-lg-8 col-md-6 col-xs-4">
           <table class="table table-bordered table-responsive" id="table">
             <tr>
               <td colspan="1"><strong></strong></td>
-              <td colspan="4"><strong>Entel</strong></td>
-              <td colspan="4"><strong>Wom</strong></td>
-              <td colspan="4"><strong>Movistar</strong></td>
-              <td colspan="4"><strong>Claro</strong></td>
+              <td class="td" colspan="4"><strong>Entel</strong></td>
+              <td class="tdOne" colspan="4"><strong>Wom</strong></td>
+              <td class="tdTwo" colspan="4"><strong>Movistar</strong></td>
+              <td class="tdThree" colspan="4"><strong>Claro</strong></td>
             </tr>
             <tr>
               <td>Sim Only</td>
@@ -103,20 +112,20 @@
 
 
 <!-- cuarta seccion -->
-  <section class="cuarta_seccion">
+  <section class="cuarta_seccion hidden">
     <div class="container">
       <div class="row">
 
-        <div class="col-lg-12 col-md-12 col-xs-12">
+        <div class="col-lg-12 col-md-12 col-xs-8 text-center">
 
-          <input data-company="Claro" type="checkbox" name="" id="claro">
-          <label for="">claro</label>
+          <input  data-company="Claro" type="checkbox" name="" id="claro">
+          <label class="check" for="">claro</label>
           <input data-company="WOM" type="checkbox" name="" id="wom">
-          <label for="">wom</label>
+          <label class="check" for="">wom</label>
           <input data-company="Entel" type="checkbox" name="" id="entel">
-          <label for="">entel</label>
+          <label class="check" for="">entel</label>
           <input data-company="Movistar" type="checkbox" name="" id="movistar">
-          <label for="">movistar</label>
+          <label class="check" for="">movistar</label>
           <br>
 
           <select name="" id="">
@@ -124,7 +133,7 @@
             <option value="" data-plan="libre">libre</option>
           </select>
 
-        <input type="text" id="plan" placeholder="plan">
+        <input  type="text" id="plan" placeholder="plan">
         <input type="number" id="precio" placeholder="valor">
         <input type="text" id="gb" placeholder="GB">
         <input type="text" id="min" placeholder="Minutos">
@@ -148,6 +157,7 @@
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-firestore.js"></script>
   <script src="assets/js/app.js"></script>
