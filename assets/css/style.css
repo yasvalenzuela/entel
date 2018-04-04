@@ -16,18 +16,31 @@ img {
   margin-left: -8%;
 }
 
-.panel .list-group li {
+
+#table {
+  margin-top: 5%;
+  margin-left: -5%;
+}
+
+.td,.tdOne,.tdTwo,.tdThree{
+  color: #fff;
+  text-align: center;
+}
+
+.td {
   background-color: #0072AE;
 }
 
-#table {
-<<<<<<< Updated upstream
-  margin-left: 42%;
-=======
-  margin-top: 5%;
-  margin-left: -5%;
-;
->>>>>>> Stashed changes
+.tdOne {
+  background-color: purple;
+}
+
+.tdTwo {
+  background-color: green;
+}
+
+.tdThree {
+  background-color: red;
 }
 
 #table_two {
