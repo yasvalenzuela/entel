@@ -1,0 +1,31 @@
+
+.navbar {
+  background-color: #0072AE;
+}
+
+img {
+  width: 3em;
+  margin-top: -15%;
+  margin-left: 55%;
+}
+
+.panel .list-group {
+  height: 150vh;
+  background-color: #0072AE;
+  margin-top: -10%;
+  margin-left: -8%;
+}
+
+.panel .list-group li {
+  background-color: #0072AE;
+}
+
+#table {
+  margin-top: -105%;
+  margin-left: 42%;
+}
+
+#table_two {
+  margin-left: 42%;
+  margin-top: -55%;
+}
