@@ -46,6 +46,7 @@ img {
 #table_two {
   margin-left: 42%;
   margin-top: -56%;
+
 }
 
 .check {
@@ -123,4 +124,13 @@ label{
 .btn:hover{
     background:#FFF;
     border:2px solid #24acb3;
+}
+
+#chart_div {
+margin: 2em;
+}
+
+.favicon {
+  width: 1em;
+  height: auto;
 }

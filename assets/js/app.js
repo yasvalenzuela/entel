@@ -1,54 +1,15 @@
 $(document).ready(() => {
   getData(['Entel', 'Claro', 'WOM', 'Movistar']);
-  google.charts.load('current', {packages:['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {
-      var oldData = google.visualization.arrayToDataTable([
-        ['Name', 'Popularity'],
-        ['Entel', 9990],
-        ['Movistar', 9990],
-        ['Claro', 9990],
-        ['Wom', 9990]
-      ]);
 
-      var newData = google.visualization.arrayToDataTable([
-        ['Name', 'Popularity'],
-        ['Entel', 0],
-        ['Movistar', 600],
-        ['Claro', 700],
-        ['Wom', 1500]
-      ]);
-
-      var options = {
-
-     series: {
-       0: { color: '#e2431e' },
-       1: { color: '#e7711b' },
-       2: { color: '#f1ca3a' },
-       3: { color: '#6f9654' },
-       4: { color: '#1c91c0' },
-
-     }
-   };
-
-      var colChartDiff = new google.visualization.ColumnChart(document.getElementById('colchart_diff'));
-      var barChartDiff = new google.visualization.BarChart(document.getElementById('barchart_diff'));
-
-      var options = { legend: { position: 'top' } };
-
-      var diffData = colChartDiff.computeDiff(oldData, newData);
-      colChartDiff.draw(diffData, options);
-      barChartDiff.draw(diffData, options);
-    }
 })
 
 firebase.initializeApp({
   apiKey: 'AIzaSyDe27uFwRSZsd1wh3zG0jWa1DEaq8mJ6I4',
   authDomain: 'firestore-1450c.firebaseapp.com',
-  databaseURL: "https://firestore-1450c.firebaseio.com",
+  /*databaseURL: "https://firestore-1450c.firebaseio.com",*/
   projectId: "firestore-1450c",
-  storageBucket: "firestore-1450c.appspot.com",
-  messagingSenderId: "454689367463"
+  /*storageBucket: "firestore-1450c.appspot.com",*/
+ /* messagingSenderId: "454689367463"*/
 
 });
 
@@ -98,6 +59,35 @@ function getData(arr) {
   })
 }
 
+
+google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart);
+function drawChart() {
+var data = google.visualization.arrayToDataTable([
+['Año', 'Planes Libres', 'Planes Controlados'],
+['Entel',  29.691,      9.990],
+['Movistar',29.990  ,      9.990],
+['Claro', 35.991,       9.990],
+['Wom',  24.990,      9.990]
+]);
+
+var options = {
+title: 'Comparación de Planes',
+
+
+  series: {
+    0: { color: '#0072ae' },
+    1: { color: '#e7711b' },
+    2: { color: '#f1ca3a' },
+    3: { color: '#6f9654' },
+    4: { color: '#1c91c0' },
+    5: { color: '#43459d' },
+  }
+};
+
+var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+chart.draw(data, options);
+/*
 firebase.initializeApp(config);
 
 var provider = new firebase.auth.GoogleAuthProvider();
@@ -123,4 +113,5 @@ var provider = new firebase.auth.GoogleAuthProvider();
   var credential = error.credential;
   // ...
 });
-}
+*/
+
