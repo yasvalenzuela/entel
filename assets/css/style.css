@@ -21,7 +21,13 @@ img {
 }
 
 #table {
+<<<<<<< Updated upstream
   margin-left: 42%;
+=======
+  margin-top: 5%;
+  margin-left: -5%;
+;
+>>>>>>> Stashed changes
 }
 
 #table_two {
